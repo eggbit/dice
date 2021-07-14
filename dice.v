@@ -22,7 +22,7 @@ pub fn roll(s string) int {
 	num_to_add    := split_op(s, "+")
 	num_to_sub    := split_op(s, "-")
 	num_to_mul    := if split_op(s, "*") == 0 { 1 } else { split_op(s, "*") }
-	num_to_div 		:= if split_op(s, "/") == 0 { 1 } else { split_op(s, "/") }
+	num_to_div    := if split_op(s, "/") == 0 { 1 } else { split_op(s, "/") }
 	num_to_drop_l := split_op(s, "L")
 	num_to_drop_h := split_op(s, "H")
 

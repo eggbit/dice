@@ -18,6 +18,7 @@ Yeah, it's really that simple. Some examples of strings the library can handle:
 "2d20" # Roll 2 d20 dice.
 "9d6-10" # Roll 9 d6 dice, then subtract 10.
 "1d6*2" # Roll a single d6 dice, then multiply by 2.
+"1d12/3" # Roll a single d12 dice, then divided by 3, rounding down.
 "5d4L2" # Roll 5 d4 dice, then discard the lowest two rolls.
 "3d20H1" # Roll 3 d20 dice, then discard the highest roll.
 ```

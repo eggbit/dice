@@ -22,6 +22,7 @@ pub fn roll(s string) int {
 	num_to_add    := split_op(s, "+")
 	num_to_sub    := split_op(s, "-")
 	num_to_mul    := if split_op(s, "*") == 0 { 1 } else { split_op(s, "*") }
+	num_to_div    := if split_op(s, "/") == 0 { 1 } else { split_op(s, "/") }
 	num_to_drop_l := split_op(s, "L")
 	num_to_drop_h := split_op(s, "H")
 
@@ -49,5 +50,5 @@ pub fn roll(s string) int {
 		roll = roll[..(roll.len - num_to_drop_h)]
 	}
 
-	return roll.reduce(sum, num_to_add) * num_to_mul - num_to_sub
+	return roll.reduce(sum, num_to_add) * num_to_mul / num_to_div - num_to_sub
 }
